@@ -1,0 +1,16 @@
+https://people.csail.mit.edu/celiu/OpticalFlow/ によるoptical flowのcpp実装。
+
+* opencv 2.4.9を使用
+MakefileのCPPFLAGSとLDFLAGSは自分の環境に合わせて変更する必要がある。
+
+* 元の実装からの変更点
+Degree of Loop Assessmentのfeature計算に不要なファイルを削除。
+各方向のoptical flowを計算するためにImage.hの一部を変更。
+optical flowだけでなく、gray scaleでのpixel間の差分とRGBでのpixel間の差分を計算するためにmain.cppを追加。
+
+* example
+$ make
+$ ./imgdiff loop_last.png loop_first.png rgbdiff
+22194.8
+$ ./imgdiff loop_first.png loop_first.png rgbdiff
+0
