@@ -5,7 +5,6 @@
 #include "OpticalFlow.h"
 
 void optflowNDirDiff(const DImage& im1, const DImage& im2) {
-  const int N = 8;
   double alpha= 1;
   double ratio=0.5;
   int minWidth= 40;

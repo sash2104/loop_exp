@@ -8,7 +8,7 @@ Degree of Loop Assessmentのfeature計算に不要なファイルを削除。
 各方向のoptical flowを計算するためにImage.hの一部を変更。
 optical flowだけでなく、gray scaleでのpixel間の差分とRGBでのpixel間の差分を計算するためにmain.cppを追加。
 
-* example
+example:
 $ make
 $ ./imgdiff loop_last.png loop_first.png rgbdiff
 22194.8
