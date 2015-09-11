@@ -8,3 +8,9 @@ do
   file=${video##*/}
   ./convertVideoSize.sh ${in_dir}${file} 240 ${out_dir}${file}
 done
+
+for video in `ls ${out_dir}*.mp4`
+do
+  file=${video##*/}
+  ./video2image.sh ${out_dir}${file}
+done
