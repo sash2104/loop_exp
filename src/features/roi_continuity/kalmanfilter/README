@@ -1,0 +1,11 @@
+kalman filterによる、ROI continuity の計算
+saliencyの計算を済ませておく必要がある
+
+input:
+  <file base path>.sal.feat : frame idとsaliencyのsumが半角空白区切りで書かれたファイル(ex: sample.sal.feat)
+  <number of trajectories> : 軌跡に用いるframe数 (論文だと5)
+output:
+  <file base path>.kal.feat
+
+$ file_base_path="sample"; num_trajectories=5;
+$ matlab -r kalman\(\'${file_base_path}\',$num_trajectories\)

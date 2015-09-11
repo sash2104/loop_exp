@@ -1,0 +1,14 @@
+saliencyの計算. 
+
+input:
+  <image directory path> : 各フレームの画像が置かれたディレクトリ. 画像名は, <frame id>.pngの形式.
+  <number of frames> : <image directory path>にある画像数
+  <number of trajectories> : 軌跡計算に使うframe数(論文だと5)
+output:
+  <image directory path>.sal.feat : frame idとsaliencyのsumが半角空白区切りで書かれたファイル(ex: ../kalmanfilter/sample.sal.feat)
+
+example:
+$ image_directory_path="sample";
+$ num_frames=1;
+$ num_trajectories=1;
+$ matlab -r saliencytrj\(\'${image_directory_path}\',${num_frames},${num_trajectories}\)
